@@ -81,7 +81,6 @@ namespace SimplePlatformer.Assets.Scripts.Player
         //This is called from PlayerInput, when a button has been pushed, that corresponds with the 'Attack' action
         public void Attack(InputAction.CallbackContext value)
         {
-            Debug.Log(GetInputState().ToString());
             if (value.started && GetInputState().CanAttack)
             {
                 OnAttack?.Invoke();

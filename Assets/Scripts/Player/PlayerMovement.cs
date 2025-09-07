@@ -182,7 +182,6 @@ namespace SimplePlatformer.Player
         private void Move()
         {
             CalculateSpeed();
-            Debug.Log(movementDirection);
             rb.velocity = new Vector2(movementDirection.x * speed, rb.velocity.y);
         }
 

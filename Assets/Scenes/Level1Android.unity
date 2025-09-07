@@ -85768,6 +85768,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 668373913, guid: e0527abbb7e260f4da9de7836a4972f9, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 668373916, guid: e0527abbb7e260f4da9de7836a4972f9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1434831059, guid: e0527abbb7e260f4da9de7836a4972f9, type: 3}
       propertyPath: androidMode
       value: 0
@@ -85822,6 +85830,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 540259816510785636, guid: e0527abbb7e260f4da9de7836a4972f9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 540259816510785639, guid: e0527abbb7e260f4da9de7836a4972f9, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 540259816510785639, guid: e0527abbb7e260f4da9de7836a4972f9, type: 3}
+      propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -86949,7 +86965,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1721854419
 RectTransform:
   m_ObjectHideFlags: 0
