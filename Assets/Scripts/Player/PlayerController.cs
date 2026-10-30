@@ -83,6 +83,9 @@ namespace SimplePlatformer.Player
 
         private void Update()
         {
+            // Let the death animation play until Respawn
+            if (CurrentState == PlayerState.DEAD) return;
+
             CurrentInput = inputHandler.GetInputState();
 
             movementDirection = CurrentInput.MovementDirection;
@@ -253,6 +256,7 @@ namespace SimplePlatformer.Player
             // Restore health
             this.healthSystem.SetHealth(PlayerSO.MaxHealth);
             this.invincible = false;
+            CurrentState = PlayerState.IDLE;
             SetAlpha(1);
             // Respawn to position
             this.transform.position = LevelManager.instance.currentRespawnPoint.position;
