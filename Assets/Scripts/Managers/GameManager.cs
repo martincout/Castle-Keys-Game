@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private RespawnManager respawnManager;
     private LevelManager levelManager;
     private PlayerController player;
+    private Coroutine showDeathMenuCo;
 
     /// <summary>
     /// Type of key and quantity
@@ -123,15 +124,18 @@ public class GameManager : MonoBehaviour
 
     public void TogglePlayerDeath(bool death)
     {
-        if(death == true)
+        PlayerIsDead = death;
+        if (showDeathMenuCo != null) StopCoroutine(showDeathMenuCo);
+
+        if (death)
         {
-            PlayerIsDead = true;
-            StartCoroutine(DieCo());
+            // Let the death animation play before showing the menu
+            showDeathMenuCo = StartCoroutine(DieCo());
         }
         else
         {
-            PlayerIsDead = false;
-            StartCoroutine(DieCo());
+            showDeathMenuCo = null;
+            UpdateUIDeath();
         }
     }
 
