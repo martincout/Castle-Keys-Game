@@ -300,6 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60ecbcd5cdbd434782b817e1b453bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfxGroup: {fileID: 2846150327716428511, guid: 89492e7fd5fcb5f47bd1c90c9a98d009, type: 2}
   sounds:
   - name: Jump
     clip: {fileID: 8300000, guid: a120974edc9db53428ac791844bbbf9e, type: 3}

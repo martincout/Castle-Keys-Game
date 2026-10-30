@@ -32,6 +32,7 @@ public abstract class Interactable : MonoBehaviour
             soundPlayed = true;
             GameObject audioGm = new GameObject("Interactable Sound");
             AudioSource source = audioGm.AddComponent<AudioSource>();
+            if (SoundManager.instance != null) source.outputAudioMixerGroup = SoundManager.instance.SfxGroup;
             source.PlayOneShot(sound);
             Destroy(audioGm, 2f);
         }

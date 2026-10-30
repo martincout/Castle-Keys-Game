@@ -28,8 +28,7 @@ public class BossStart : MonoBehaviour
             boss.DisplayHealthBar();
             celldoor.SetActive(true);
             Debug.Log(celldoor);
-            StartCoroutine(FadeMixerGroup.StartFadeOut(audioMixer, "vol1", 1f, 0f));
-            StartCoroutine(FadeMixerGroup.StartFadeIn(audioMixer, "vol2", 2f, 0f));
+            audioMixer.FindSnapshot("Boss").TransitionTo(2f);
         }
     }
 
